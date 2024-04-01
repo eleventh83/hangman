@@ -115,7 +115,11 @@ class Word:
         if letter.lower() in self.tried_letters:
             print(f"The letter '{letter.lower()}' has already been entered.")
             return False
-
+            
+        if letter.lower() not in "abcdefghijklmnopqrstuvwxyz":
+            print("Please enter a latin alphabet")
+            return False
+        
         return True
 
     def guess(self, letter: str):
